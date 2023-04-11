@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 default_args = {
     'depends_on_past': False,
     'start_date': datetime(2023, 4, 10),
-    'email': ['eltonsantosdev4@gmail.com'],
+    'email': ['seu_email'],
     'email_on_failure': True,
     'email_on_retry': False,
     'retries': 1,
@@ -36,7 +36,7 @@ task6 = BashOperator(
 
 send_email = EmailOperator(
     task_id="send_email",
-    to="eltonsantosdev4@gmail.com",
+    to="seu_email",
     subject="Airflow Error",
     html_content="""
     <h3>Ocorreu um erro na Dag.</3>
